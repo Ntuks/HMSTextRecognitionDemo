@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TextRecognition</string>
+    <string name="first_fragment">First Fragment</string>
+    <string name="recog_sel_fragment">Recognition Selection Fragment</string>
+    <string name="static_recog_fragment">Static Recognition Fragment</string>
+    <string name="live_recog_fragment">Live Recognition Fragment</string>
+    <string name="live_recog_result_fragment">Live Recognition Result Fragment</string>
+    <string name="go_authorization">Go Authorization</string>
+    <string name="Information_permission">Obtaining related permissions: Camera permissions failed...</string>
+</resources>

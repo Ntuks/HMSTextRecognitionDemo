@@ -1,0 +1,12 @@
+{
+	"client":{
+		"cp_id":"890027000000000435",
+		"product_id":"736430079244659629",
+		"client_id":"468458634855056448",
+		"client_secret":"65826429BD12A5ABF7CD0AAAFE048136C284B669B696817841F085B6CAB4A1C4",
+		"app_id":"103011283",
+		"package_name":"com.example.textrecognition",
+		"api_key":"CgB6e3x9kpOiDLjY1SdR7wimYr+1Y4pDRJSraPYiX+a+9lH6gTeghHaCS5vbyqmSUVY/uojl8zpWx7EttLCWLl6x"
+	},
+	"configuration_version":"1.0"
+}

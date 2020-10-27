@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.textrecognition.Fragments.FirstFragment"
+        android:label="@string/first_fragment"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/selectRecognitionMethod"
+            app:destination="@id/RecognitionSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RecognitionSelectionFragment"
+        android:name="com.example.textrecognition.Fragments.RecognitionSelectionFragment"
+        android:label="@string/recog_sel_fragment"
+        tools:layout="@layout/fragment_recognition_selection">
+
+        <action
+            android:id="@+id/performStaticRecognition"
+            app:destination="@id/StaticRecognitionFragment" />
+        <action
+            android:id="@+id/performLiveRecognition"
+            app:destination="@id/LiveRecognitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StaticRecognitionFragment"
+        android:name="com.example.textrecognition.Fragments.StaticRecognitionFragment"
+        android:label="@string/static_recog_fragment"
+        tools:layout="@layout/fragment_static_recognition">
+
+        <action
+            android:id="@+id/action_SignUpStartFragment_to_SignUpFinishFragment"
+            app:destination="@id/RecognitionSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LiveRecognitionFragment"
+        android:name="com.example.textrecognition.Fragments.LiveRecognitionFragment"
+        android:label="@string/live_recog_fragment"
+        tools:layout="@layout/fragment_live_recognition">
+
+        <action
+            android:id="@+id/action_SignUpFinishFragment_to_SignInFragment"
+            app:destination="@id/LiveRecognitionResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LiveRecognitionResultFragment"
+        android:name="com.example.textrecognition.Fragments.LiveRecognitionResultFragment"
+        android:label="@string/live_recog_result_fragment"
+        tools:layout="@layout/fragment_live_result_recognition">
+        <!--        android:label="@string/signup_finish_fragment_label"-->
+        <action
+            android:id="@+id/action_SignUpFinishFragment_to_SignInFragment"
+            app:destination="@id/RecognitionSelectionFragment" />
+    </fragment>
+</navigation>
