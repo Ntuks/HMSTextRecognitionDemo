@@ -1,5 +1,7 @@
 package com.example.textrecognition.Fragments
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,10 +10,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.textrecognition.Controllers.StaticRecognitionViewModel
 import com.example.textrecognition.R
+import com.google.android.material.snackbar.Snackbar
 import com.huawei.hms.mlsdk.MLAnalyzerFactory
 import com.huawei.hms.mlsdk.common.MLFrame
 import com.huawei.hms.mlsdk.text.MLLocalTextSetting
@@ -20,7 +25,6 @@ import java.io.IOException
 
 
 class StaticRecognitionFragment : Fragment() {
-    // Method 1: Use default parameter settings to configure the on-device text analyzer. Only Latin-based languages can be recognized.
     private var analyzer = MLAnalyzerFactory.getInstance().localTextAnalyzer
 
     private val model: StaticRecognitionViewModel by activityViewModels()
@@ -41,9 +45,6 @@ class StaticRecognitionFragment : Fragment() {
         }
     }
 
-    /**
-     * Text recognition on the device
-     */
     private fun localAnalyzer() {
         // Create the text analyzer MLTextAnalyzer to recognize characters in images. You can set MLLocalTextSetting to
         // specify languages that can be recognized.

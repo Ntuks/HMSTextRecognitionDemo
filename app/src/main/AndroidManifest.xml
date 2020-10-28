@@ -6,20 +6,10 @@
         android:name="com.huawei.hms.ml.DEPENDENCY"
         android:value= "ocr"/>
 
-    <!--Camera permission-->
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!--Internet permission-->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--Write permission-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--Read permission-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!--Network status obtaining permission-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--Wi-Fi status obtaining permission-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
